@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 // include("connection.php");
@@ -40,7 +39,14 @@ if(isset($_POST['submit']))
 	    	$result['success'] = "1";
 	    	$result['message'] = "success";
 	    	echo json_encode($result);
-			header('Location: body.php');
+	    	if ($_SESSION["assoc"] == '1') {
+	    		echo "<script>alert('Login successful.');</script>";
+	        	echo "<script>window.close(); window.location = \"index.php\";</script>";
+	    	}else{
+	    		echo "<script>alert('Login successful.');</script>";
+	        	echo "<script>window.close(); window.location = \"body.php\";</script>";
+	    	}
+			//header('Location: body.php');
 	      // echo "<script>window.location='body.php';</script>";
 	      // echo "<script>window.close(); window.location = \"body.php\";</script>";
 	    }else {
@@ -49,7 +55,7 @@ if(isset($_POST['submit']))
 	    	$result['message'] = "error";
 	    	echo json_encode($result);
 	        echo "<script>alert('Login unsuccessful.');</script>";
-	        echo "<script>window.close(); window.location = \"login.html\";</script>";
+	        echo "<script>window.close(); window.location = \"index.html\";</script>";
 	    }
 	}
 	    	

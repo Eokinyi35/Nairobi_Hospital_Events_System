@@ -78,7 +78,7 @@ session_start();
     </nav>
 
     <!-- Header -->
-    <header>
+   <!--  <header>
         <div><img src="img/logo.png"></div>
         <div class="container">
             <div class="intro-text">
@@ -86,7 +86,7 @@ session_start();
                 <!-- <div class="intro-heading">TNH Events</div> -->
             </div>
         </div>
-    </header>
+    </header> -->
 
    
 
@@ -228,7 +228,6 @@ session_start();
                                           <!-- Project Details Go Here -->
 
                                           <h2>Parties</h2>
-
                                          <a href="donate.php">
                                          <div class="portfolio-hover">
                                           <div class="portfolio-hover-content">
@@ -258,7 +257,7 @@ session_start();
                                               // output data of each row
                                                 while($rew = $sql->fetch_assoc()) {
                                                   echo '<a href=register.php?event_id=' . $rew['eventId'] . '> '; 
-                                                  echo '<td><img src = "img/'.$rew["eventimage"].'"width = "700px" height = "500px"/></td>'."<br>";
+                                                  echo '<td><img src = "img/'.$rew["image"].'"width = "700px" height = "500px"/></td>'."<br>";
                                                   echo  "Name: " . $rew["eventname"]."<br>";
                                                   echo  "First date: " . $rew["firstdate"]."<br>";
                                                   echo "Second date: " . $rew["seconddate"]."<br>";
@@ -329,7 +328,7 @@ session_start();
                                               // output data of each row
                                                 while($rew = $sql->fetch_assoc()) {
                                                   echo '<a href=register.php?event_id=' . $rew['eventId'] . '> '; 
-                                                  echo '<td><img src = "img/'.$rew["eventimage"].'"width = "700px" height = "500px"/></td>'."<br>";
+                                                  echo '<td><img src = "img/'.$rew["image"].'"width = "700px" height = "500px"/></td>'."<br>";
                                                   echo  "Name: " . $rew["eventname"]."<br>";
                                                   echo  "First date: " . $rew["firstdate"]."<br>";
                                                   echo "Second date: " . $rew["seconddate"]."<br>";
@@ -400,7 +399,7 @@ session_start();
                                               // output data of each row
                                                 while($rew = $sql->fetch_assoc()) {
                                                   echo '<a href=register.php?event_id=' . $rew['eventId'] . '> '; 
-                                                  echo '<td><img src = "img/'.$rew["eventimage"].'"width = "700px" height = "500px"/></td>'."<br>";
+                                                  echo '<td><img src = "img/'.$rew["image"].'"width = "700px" height = "500px"/></td>'."<br>";
                                                   echo  "Name: " . $rew["eventname"]."<br>";
                                                   echo  "First date: " . $rew["firstdate"]."<br>";
                                                   echo "Second date: " . $rew["seconddate"]."<br>";

@@ -77,33 +77,48 @@
             <div class="row">
                 <section class="mobile-app theme_background_color" id="sign up">
       <div class="container">
+        <div style="position:absolute; top:200px; left:100px; width:400px; height:400px;">
+            <form action="search.php" method="GET">
+                <input type="text" name="search" placeholder="search for user">
+                <input id="submit" type="submit" value="Search">
+                <!-- <button type="submit"><i class="fa fa-times"></i></button> -->
+            </form>
+        </div>    
             <form method="post"  action="insert.php">
-            <div style="position:absolute; top:200px; left:100px; width:400px; height:400px;">
+            <div style="position:absolute; top:250px; left:100px; width:400px; height:400px;">
           <div class="col-lg-12 text-center"> 
           <h3>user Registration</h3>
+          <a  class="page-scroll" href="import.html">import users</a><br/>
                 <label><font color="black">Payroll:</font></label> 
                 <input type="number" name="payroll" placeholder="payroll number"  class="form-control" style = "width: 200px; left:660px;"/><br/>
                 <label><font color="black">Full name:</font></label> 
                 <input type="name" name="fullname" placeholder="Full name"  class="form-control" style = "width: 200px; left:660px;"/><br/>
+                <label><font color="black">Department:</font></label> 
+                <input type="name" name="department" placeholder="department"  class="form-control" style = "width: 200px; left:660px;"/><br/>
                 <label><font color="black">Email:</font></label><br/>
                 <input type="email" name="email" placeholder="email"  class="form-control" style = "width: 200px;"/><br/>
+                <label><font color="black">Phone number:</font></label> 
+                <input type="number" name="phone" placeholder="Phone number"  class="form-control" style = "width: 200px; left:660px;"/><br/>
                 <label><font color="black">Password:</font></label><br/>
                 <input type="password" name="password" placeholder="password"  class="form-control" style = "width: 200px;"/><br/>
+
+                
                 
                         </div>
                         <input type="submit" name="submit" value="Create account" class="btn btn-style blue"/><br/>
                         </div>
+
                  </form>
                         </div>
                   </section>
 
 
-             <form method="post"  action="insert4.php">
+             <form method="POST"  action="insert4.php">
             <div style="position:absolute; top:250px; left:900px; width:400px; height:400px;">
           <div class="col-lg-12 text-center"> 
           <h3>Add an Event</h3>
-                <label><font color="black">Event Image:</font></label> 
-                <input type="file" name="eventimage" placeholder="Event Image"  class="form-control" style = "width: 200px; left:660px;"/><br/>
+                <label><font color="black">Event Poster:</font></label> 
+                <input type="file" name="image" id="image" placeholder="image"  maxlength="200" style = "width: 440px; left:660px;"/><br/>
                 <label><font color="black">Event Name:</font></label> 
                 <input type="name" name="eventname" placeholder="Event Name"  class="form-control" style = "width: 200px; left:660px;"/><br/>
                 <label><font color="black">Event first day:</font></label> 
@@ -119,7 +134,7 @@
                                 </div>
                 
                         </div>
-                        <input type="submit" name="submit" value="Create center" class="btn btn-style blue"/><br/>
+                        <input type="submit" name="Submit" value="Add Event" class="btn btn-style blue"/><br/>
                         </div>
                  </form>
                         </div>

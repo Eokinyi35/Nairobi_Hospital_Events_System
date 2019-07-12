@@ -4,7 +4,7 @@
 				<li class="ts-label">Main</li>
 				<li><a href="reports.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
 			
-<li><a href="totaldonations.php"><i class="fa fa-files-o"></i>Donation</a>
+<li><a href="events.php"><i class="fa fa-files-o"></i>Events</a>
 <ul>
 <!--<li><a href="add-organ.php">Add Organ</a></li>-->
 <!-- <li><a href="manage-organ.php">Manage Organs</a></li> -->

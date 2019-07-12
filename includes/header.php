@@ -1,5 +1,5 @@
 <div class="brand clearfix">
-	<a href="dashboard.php" style="font-size: 20px; padding-top:1%; color:#fff">I-Donation</a>  
+	<a href="admin.html" style="font-size: 20px; padding-top:1%; color:#fff">TNH Events</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 			

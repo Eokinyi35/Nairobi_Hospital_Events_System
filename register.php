@@ -13,7 +13,7 @@ require_once "connection.php";
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>I-Donate</title>
+    <title>TNH Events</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -87,7 +87,23 @@ require_once "connection.php";
                                       <option>Prefered date</option>
                                         <?php
 
-                                            $query1 = "SELECT * FROM eventchoice WHERE event_id = '$eventId' ";
+                                        $servername = "localhost";
+                                          $serveruser = "root";
+                                          $serverpass = "";
+                                          $dbname = "tnhevents";
+
+                                          $conn = new mysqli($servername, $serveruser, $serverpass, $dbname);
+                                            
+                                          
+                                          //$ID = $_SESSION['assoc'];
+
+                                          require_once "connection.php";
+
+                                          $event_id = 0;
+                                    if(isset($_GET['event_id'])){
+                                        $event_id = $_GET['event_id'];
+
+                                            $query1 = "SELECT * FROM eventchoice WHERE eventId = $event_id";
                                             $result1 = $conn->query($query1);
                                             if($result1->num_rows > 0){
                                                 while($rows1 = $result1->fetch_assoc()){
@@ -100,20 +116,28 @@ require_once "connection.php";
                                         <?php
                                                 }
                                             }
+                                        }
                                         ?>
                                     </select>
+                                    <select name="transportation" id="transportation">
+                                        <option>Mode of transportation</option>
+                                      <option value="Private">Private</option>
+                                      <option value="Institution provision">Institution provision</option>
+                                    </select>
+                                    <a href="regdetails.php">Registered event details</a>
                                 </div>
+                                 
                             </div>
                             <div class="col-md-6">
-                                <?php 
-                                    $camp_id = 0;
+                                <!-- <?php 
+                                    $event_id = 0;
                                     if(isset($_GET['event_id'])){
-                                        $camp_id = $_GET['event_id'];
+                                        $event_id = $_GET['event_id'];
                                     }
 
 
 
-                                ?>
+                                ?> -->
                                 <input type="hidden" id="eventId" value="<?php echo $event_id; ?>"></input>
                             </div>
                             <div class="clearfix"></div>
